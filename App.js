@@ -209,21 +209,85 @@
 //   },
 // });
 
+// import { StyleSheet, Text, View } from "react-native";
+// import React from "react";
+
+// const App = () => {
+//   return (
+//     <View style={styles.container}>
+//       <View style={[styles.Box1, styles.Box, styles.androidShadow]}>
+//         <Text>orange Box</Text>
+//       </View>
+//       <View style={[styles.Box2, styles.Box]}>
+//         <Text>White Box</Text>
+//       </View>
+//       <View style={[styles.Box3, styles.Box]}>
+//         <Text>Green Box</Text>
+//       </View>
+//     </View>
+//   );
+// };
+
+// export default App;
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: "lightyellow",
+//     alignContent: "center",
+//     justifyContent: "center",
+//     borderWidth: 5,
+// borderColor:'red',
+//   },
+//   BoxShadow: {
+// shadowColor: 'grey',
+// shadowOffset: {
+//   width: 0,
+//   height: 2,
+// },
+// shadowOpacity: 0.8,
+// shadowRadius: 20,
+
+//   },
+//   Box: {
+//     width: 250,
+//     height: 250,
+//   },
+//   Box1: {
+//     backgroundColor: "orange",
+//   },
+//   Box2: {
+//     backgroundColor: "White",
+//   },
+//   Box3: {
+//     backgroundColor: "green",
+//   },
+//   androidShadow:
+//   {
+//     elevation: 10,
+
+//     shadowColor: 'black',
+
+//   }
+// });
+
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
+import { StatusBar } from "react-native";
+import Box from "./Components/Box";
 
 const App = () => {
   return (
     <View style={styles.container}>
-      <View style={[styles.Box1, styles.Box, styles.androidShadow]}>
-        <Text>orange Box</Text>
-      </View>
-      <View style={[styles.Box2, styles.Box]}>
-        <Text>White Box</Text>
-      </View>
-      <View style={[styles.Box3, styles.Box]}>
-        <Text>Green Box</Text>
-      </View>
+      <StatusBar
+        barStyle="light-content"
+        hidden={true}
+      />
+      {/* <ActivityIndicator color='Black' animating={true} size={'large'}/> */}
+      {/* <Text>App</Text> */}
+      <Box style={{ backgroundColor: "#7f00ff", alignSelf:"auto"}}>V</Box>
+      <Box style={{ backgroundColor: "indigo", alignSelf:"auto"}}>I</Box>
+      <Box style={{ backgroundColor: "blue" ,alignSelf:"auto"}}>B</Box>
     </View>
   );
 };
@@ -233,40 +297,9 @@ export default App;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "lightyellow",
-    alignContent: "center",
-    justifyContent: "center",
-    borderWidth: 5,
-borderColor:'red',
+    alignItems: "center",
+    marginTop: 50,
+    borderWidth: 3,
+    borderColor: "plum",
   },
-  BoxShadow: {
-shadowColor: 'grey',
-shadowOffset: {
-  width: 0,
-  height: 2,
-},
-shadowOpacity: 0.8,
-shadowRadius: 20,
-
-  },
-  Box: {
-    width: 250,
-    height: 250,
-  },
-  Box1: {
-    backgroundColor: "orange",
-  },
-  Box2: {
-    backgroundColor: "White",
-  },
-  Box3: {
-    backgroundColor: "green",
-  },
-  androidShadow:
-  {
-    elevation: 10,
-    
-    shadowColor: 'black',
-   
-  }
 });
